@@ -79,6 +79,11 @@ service:
   type: ClusterIP
   port: 443
 
+# configure Connaisseur serviceaccount (so you can do IRSA, for example)
+serviceaccount:
+  annotations:
+#     eks.amazonaws.com/role-arn: arn:aws:iam::XXX:role/myrole
+
 ### VALIDATORS ###
 # validators are a set of configurations (types, public keys, authentication)
 # that can be used for validating one or multiple images (or image signatures).
